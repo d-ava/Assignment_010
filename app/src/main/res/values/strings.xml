@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Assignment_010</string>
+    <string name="enter_your_passcode">enter your passcode</string>
+    <string name="security_screen">Security Screen</string>
+    <string name="forgot_password">forgot password?</string>
+</resources>

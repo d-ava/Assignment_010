@@ -13,14 +13,11 @@
 
     </item>
 
-    <item>
 
-        <bitmap android:src="@drawable/ic_bg"
-            android:tileMode="disabled"
-            />
+<item>
 
-    </item>
-
+    <inset android:drawable="@drawable/ic_bg"/>
+</item>
 
 
 </layer-list>

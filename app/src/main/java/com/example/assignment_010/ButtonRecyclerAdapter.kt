@@ -49,14 +49,14 @@ class ButtonRecyclerAdapter : RecyclerView.Adapter<ButtonRecyclerAdapter.ButtonV
             btn = list[adapterPosition]
             binding.btnText.text = btn.number.toString()
             if (btn.type == "finger" ){
-                binding.btnIcon.visibility= View.VISIBLE
-                binding.btnIcon.setImageResource(btn.icon!!)
+                binding.btnFingerprintIcon.visibility= View.VISIBLE
+                binding.btnFingerprintIcon.setImageResource(btn.icon!!)
                 binding.btnText.visibility=View.INVISIBLE
             }
 
             if (btn.type == "del" ){
-                binding.btnIcon.visibility= View.VISIBLE
-                binding.btnIcon.setImageResource(btn.icon!!)
+                binding.btnDeleteIcon.visibility= View.VISIBLE
+                binding.btnDeleteIcon.setImageResource(btn.icon!!)
                 binding.btnText.visibility=View.INVISIBLE
             }
 

@@ -32,7 +32,7 @@ class SecurityFragment :
         ButtonDigits(number = 9, type = "num"),
         ButtonDigits(type = "finger", icon = R.drawable.ic_baseline_fingerprint_24),
         ButtonDigits(number = 0, type = "num"),
-        ButtonDigits(type = "del", icon = R.drawable.ic_baseline_arrow_back_24),
+        ButtonDigits(type = "del", icon = R.drawable.ic_delete),
     )
 
 

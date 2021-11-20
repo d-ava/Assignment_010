@@ -5,9 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/ic_bg"
+
+    android:background="@drawable/background"
 
     tools:context=".SecurityFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEnterPasscode">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/dot_grey" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/dot_grey" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/dot_grey" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dot4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/dot_grey" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSecurityScreen"
@@ -16,6 +63,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/security_screen"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,53 +77,13 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/enter_your_passcode"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvSecurityScreen" />
 
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/dot1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-
-        android:src="@drawable/dot_grey"
-        app:layout_constraintEnd_toStartOf="@id/dot2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEnterPasscode" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/dot2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:src="@drawable/dot_grey"
-        app:layout_constraintEnd_toStartOf="@id/dot3"
-        app:layout_constraintStart_toEndOf="@id/dot1"
-        app:layout_constraintTop_toTopOf="@id/dot1" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/dot3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:src="@drawable/dot_grey"
-
-        app:layout_constraintEnd_toStartOf="@id/dot4"
-        app:layout_constraintStart_toEndOf="@id/dot2"
-        app:layout_constraintTop_toTopOf="@id/dot1" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/dot4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/dot_grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/dot3"
-        app:layout_constraintTop_toTopOf="@id/dot1" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -83,10 +91,9 @@
         android:layout_height="wrap_content"
 
 
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dot1" />
+        app:layout_constraintTop_toBottomOf="@id/linear" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvForgotPassword"
@@ -94,10 +101,10 @@
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="10dp"
-        android:text="@string/forgot_password"
         android:fontFamily="@font/poppins_light"
+        android:text="@string/forgot_password"
 
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

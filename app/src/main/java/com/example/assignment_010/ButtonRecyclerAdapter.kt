@@ -48,13 +48,13 @@ class ButtonRecyclerAdapter : RecyclerView.Adapter<ButtonRecyclerAdapter.ButtonV
             binding.root.setOnClickListener(this)
             btn = list[adapterPosition]
             binding.btnText.text = btn.number.toString()
-            if (btn.number == 10 ){
+            if (btn.type == "finger" ){
                 binding.btnIcon.visibility= View.VISIBLE
                 binding.btnIcon.setImageResource(btn.icon!!)
                 binding.btnText.visibility=View.INVISIBLE
             }
 
-            if (btn.number == 11 ){
+            if (btn.type == "del" ){
                 binding.btnIcon.visibility= View.VISIBLE
                 binding.btnIcon.setImageResource(btn.icon!!)
                 binding.btnText.visibility=View.INVISIBLE

@@ -2,7 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:layout_margin="10dp"
+    android:paddingStart="21dp"
+    android:paddingEnd="21dp"
+    android:paddingTop="16dp"
+
 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
@@ -12,6 +15,8 @@
         android:layout_height="wrap_content"
 
 
+
+
         android:src="@drawable/circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,8 +24,8 @@
         />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/ic_baseline_fingerprint_24"
         app:layout_constraintStart_toStartOf="@id/circle"
         app:layout_constraintEnd_toEndOf="@id/circle"
@@ -37,7 +42,8 @@
         app:layout_constraintEnd_toEndOf="@id/circle"
         app:layout_constraintTop_toTopOf="@id/circle"
         app:layout_constraintBottom_toBottomOf="@id/circle"
-        android:textSize="18sp"
+        android:textSize="28sp"
+        android:fontFamily="@font/poppins_light"
         android:id="@+id/btnText"/>
 
 

@@ -18,6 +18,9 @@
 
 
 
+
+
+
         android:src="@drawable/circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -71,7 +74,11 @@
         app:cornerRadius="30dp"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/btn"
-        android:text="1" />-->
+        app:layout_constraintStart_toStartOf="@id/circle"
+        app:layout_constraintEnd_toEndOf="@id/circle"
+        app:layout_constraintTop_toTopOf="@id/circle"
+        app:layout_constraintBottom_toBottomOf="@id/circle"
+
+       />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

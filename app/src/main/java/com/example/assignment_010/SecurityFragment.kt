@@ -1,5 +1,6 @@
 package com.example.assignment_010
 
+import android.util.TypedValue
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.assignment_010.databinding.SecurityFragmentBinding
@@ -46,6 +47,7 @@ class SecurityFragment :
         setRecycler()
         setClick()
 
+
     }
 
 
@@ -58,6 +60,8 @@ class SecurityFragment :
 
 
     }
+
+
 
     private fun setClick() {
 
@@ -74,6 +78,7 @@ class SecurityFragment :
             } else if (it.type == "del" && counter > 0) {
                 counter -= 1
                 newPass = newPass.dropLast(1)
+                dotColor(counter)
                 view?.showSnackBar("code - $newPass counter - $counter")
 
             }
@@ -82,13 +87,8 @@ class SecurityFragment :
                 newPass += it.number.toString()
                 counter += 1
 
-                when (counter) {
-                    1 -> binding.dot1.setImageResource(R.drawable.dot_green)
-                    2 -> binding.dot2.setImageResource(R.drawable.dot_green)
-                    3 -> binding.dot3.setImageResource(R.drawable.dot_green)
-                    4 -> binding.dot4.setImageResource(R.drawable.dot_green)
+                dotColor(counter)
 
-                }
                 view?.showSnackBar("code - $newPass counter - $counter")
 
             }
@@ -98,16 +98,13 @@ class SecurityFragment :
                 if (newPass == pass) {
                     counter = 0
                     newPass = ""
-                    view?.showToast("correct password")
+                    view?.showSnackBar("CORRECT PASSWORD")
 
                 } else {
                     counter = 0
                     newPass = ""
-                    binding.dot1.setImageResource(R.drawable.dot_grey)
-                    binding.dot2.setImageResource(R.drawable.dot_grey)
-                    binding.dot3.setImageResource(R.drawable.dot_grey)
-                    binding.dot4.setImageResource(R.drawable.dot_grey)
-                    view?.showToast("incorrect password")
+                    dotColor(counter)
+                    view?.showSnackBar("WRONG PASSWORD")
                 }
             }
 
@@ -116,7 +113,50 @@ class SecurityFragment :
 
 
     }
+
+    private fun dotColor(cnt:Int){
+        when (cnt) {
+            1 -> {
+                binding.dot1.setImageResource(R.drawable.dot_green)
+                binding.dot2.setImageResource(R.drawable.dot_grey)
+                binding.dot3.setImageResource(R.drawable.dot_grey)
+                binding.dot4.setImageResource(R.drawable.dot_grey)
+            }
+            2 ->{
+                binding.dot1.setImageResource(R.drawable.dot_green)
+                binding.dot2.setImageResource(R.drawable.dot_green)
+                binding.dot3.setImageResource(R.drawable.dot_grey)
+                binding.dot4.setImageResource(R.drawable.dot_grey)
+            }
+            3 -> {
+                binding.dot1.setImageResource(R.drawable.dot_green)
+                binding.dot2.setImageResource(R.drawable.dot_green)
+                binding.dot3.setImageResource(R.drawable.dot_green)
+                binding.dot4.setImageResource(R.drawable.dot_grey)
+            }
+            4 -> {
+                binding.dot1.setImageResource(R.drawable.dot_green)
+                binding.dot2.setImageResource(R.drawable.dot_green)
+                binding.dot3.setImageResource(R.drawable.dot_green)
+                binding.dot4.setImageResource(R.drawable.dot_green)
+            }
+            0 -> {
+                binding.dot1.setImageResource(R.drawable.dot_grey)
+                binding.dot2.setImageResource(R.drawable.dot_grey)
+                binding.dot3.setImageResource(R.drawable.dot_grey)
+                binding.dot4.setImageResource(R.drawable.dot_grey)
+            }
+
+        }
+    }
 }
+
+/*  val outValue = TypedValue()
+        context?.theme?.resolveAttribute(android.R.attr.selectableItemBackground, outValue, true)
+        cardView.setBackgroundResource(outValue.resourceId)*/
+
+
+// android:background="?android:attr/selectableItemBackground"
 
 
 
